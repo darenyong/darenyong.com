@@ -9,13 +9,27 @@ Hosting provider: [Hostigger.com](https://www.hostigger.com/virtual-private-serv
 Great price at $2.99 USD/mo (for 1 vCPU, 2 GB Ram, 20 GB SSD, 2TB bandwidth)
 
 ## Personal repos used
-* [traefik](https://github.com/darenyong/traefik) (reverse proxy providing SSL and routing to containers)
-* [auth](https://github.com/darenyong/auth) (auth microservice)
-* [hello-world](https://github.com/darenyong/hello-world/tree/develop) (simple demo app)
+* [traefik](https://github.com/darenyong/traefik)
+(reverse proxy providing SSL and routing to containers)
+* [auth](https://github.com/darenyong/auth)
+(auth microservice for generating JWT tokens)
+* [hello-world](https://github.com/darenyong/hello-world/tree/develop)
+(simple demo app connected to MongoDB)
+
+## Overview
+
+fix me
+
+## Auth Sequence Diagram
+
+fix me
 
 ## Todo List
+* Configure Jenkins CI to be able to auto-deploy
+latest code on commit & unit test pass.
+* Create Jenkins task to run traefik container with one click.
 * Monitoring of Host, containers, and Traefik using Prometheus and Grafana
 stolen from [here](https://www.brianchristner.io/updated-docker-monitoring-prometheus-grafana/).
-* Mild CSS animations for web front-end.
-* Android mobile app (probably React Native).
+* Play with mild CSS animations for web front-end.
+* Android mobile app (play with React Native).
 * iOS mobile app (Swift).
