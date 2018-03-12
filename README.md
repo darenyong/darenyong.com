@@ -8,6 +8,8 @@ Hosting provider: [Hostigger.com](https://www.hostigger.com/virtual-private-serv
 
 Great price at $2.99 USD/mo (for 1 vCPU, 2 GB Ram, 20 GB SSD, 2TB bandwidth)
 
+[web dashboard](http://darenyong.com:44444/dashboard/#/health) (password protected)
+
 ## Personal repos used
 * [traefik](https://github.com/darenyong/traefik)
 (reverse proxy providing SSL and routing to containers)
@@ -18,11 +20,15 @@ Great price at $2.99 USD/mo (for 1 vCPU, 2 GB Ram, 20 GB SSD, 2TB bandwidth)
 
 ## Overview
 
-fix me
+<p align="center">
+  <img src="img/overview.png" alt="Auth" title="Auth" />
+</p>
 
 ## Auth Sequence Diagram
 
-fix me
+<p align="center">
+  <img src="img/authflow2.png" alt="Auth" title="Auth" />
+</p>
 
 ## Todo List
 * Configure Jenkins CI to be able to auto-deploy
