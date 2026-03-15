@@ -197,7 +197,7 @@
 <body>
     <nav>
         <a href="index.html" class="name">Daren Yong</a>
-        <span class="subtitle">AI-First Software Engineer</span>
+        <span class="subtitle">Senior Production Engineer</span>
         <a href="harness.html" class="active">The Harness</a>
         <a href="method.html">The Method</a>
     </nav>
@@ -253,8 +253,9 @@ graph TB
             Two ways in. Claude Code on the desktop for interactive sessions —
             the workbench where architecture happens. Telegram on mobile for
             voice-to-text via Wispr — thoughts captured on the move, routed
-            through the harness to the same session. Desk-to-mobile handoff
-            without losing context.
+            through the harness to the same session. Same problem as shift
+            handoff on a support team: context lost between channels is
+            context you'll debug later. This solves it at the infrastructure level.
         </p>
     </section>
 
@@ -263,16 +264,20 @@ graph TB
     <section class="content-section">
         <h2>The memory architecture</h2>
         <p>
-            Two pools, different temperatures. The <em>dirty pond</em> captures
-            everything — raw prompt/response pairs from every session, tagged
-            by source, stored in TimescaleDB with a 30-day window. Automatic,
-            unfiltered, searchable. The noise floor.
+            Two pools, different temperatures. The <em>dirty pond</em> is a log
+            aggregation strategy — raw prompt/response pairs from every session,
+            tagged by source, stored in TimescaleDB with a 30-day window. The same
+            approach as centralized logging in production: capture everything,
+            query when you need it. 72% of production incidents trace back to
+            context that was available but not surfaced. The pond makes sure
+            nothing falls through.
         </p>
         <p>
-            The <em>cold reservoir</em> is the opposite — curated knowledge that
-            survived the furnace. Partnership principles, builder shape, terrain
-            choices, visions. Loaded on demand when a topic matches. Pieces
-            of steel, not fourteen thousand facts.
+            The <em>cold reservoir</em> is the opposite — curated business rules
+            that survived the furnace. The same discipline as maintaining the 100
+            business rules captured for a dealer configuration management system:
+            not raw data, but tested knowledge loaded on demand when a topic
+            matches. Pieces of steel, not fourteen thousand facts.
         </p>
     </section>
 
@@ -283,7 +288,9 @@ graph TB
         <p>
             The journal is the engine. Each session produces sparks — ideas that
             might matter. Sparks that keep coming back graduate to threads.
-            Threads that survive into daily use become handbooks. Everything
+            Threads that survive into daily use become handbooks. The spec-driven
+            development playbook came from this loop — a spark from a production
+            session, refined through debate, adopted by the team. Everything
             else burns in the furnace. What survives is steel — knowledge
             compressed by use and refined by forgetting.
         </p>
