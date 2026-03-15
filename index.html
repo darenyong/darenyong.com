@@ -5,20 +5,283 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daren Yong</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            max-width: 600px;
-            margin: 80px auto;
-            padding: 0 20px;
-            color: #e0e0e0;
-            background: #1a1a1a;
+            font-family: 'Libre Baskerville', 'Georgia', serif;
+            background: #faf6f0;
+            color: #3a2e28;
+            min-height: 100vh;
         }
-        h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
-        p { color: #999; line-height: 1.6; }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            color: #8a7e76;
+            gap: 2rem;
+        }
+
+        nav .name {
+            font-weight: 700;
+            color: #3a2e28;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        nav .subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8a7e76;
+            border-left: 1px solid #d9d0c7;
+            padding-left: 1.5rem;
+        }
+
+        nav a {
+            color: #8a7e76;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #3a2e28;
+        }
+
+        nav a.active {
+            color: #3a2e28;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 85vh;
+            padding: 0 3rem;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 420px;
+        }
+
+        .hero-text .verse {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #3a2e28;
+        }
+
+        .hero-text .verse em {
+            font-style: italic;
+            color: #6b5d52;
+        }
+
+        .hero-text .attribution {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #8a7e76;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+            clip-path: inset(10px);
+        }
+
+        .image-subtext {
+            font-size: 0.8rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: #8a7e76;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .scroll-hint {
+            text-align: left;
+            padding: 0 3rem 2rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: #8a7e76;
+        }
+
+        /* Content sections */
+        .content-section {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+        }
+
+        .content-section .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #8a7e76;
+            margin-bottom: 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #5a4e46;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section em {
+            color: #3a2e28;
+            font-style: italic;
+        }
+
+        .divider {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .divider hr {
+            border: none;
+            border-top: 1px solid #d9d0c7;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                padding: 2rem 1.5rem;
+                min-height: auto;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-text .verse {
+                font-size: 1.4rem;
+            }
+
+            .hero-image img {
+                max-height: 50vh;
+            }
+
+            nav { padding: 1rem 1.5rem; }
+            .scroll-hint { padding: 0 1.5rem 2rem; }
+        }
     </style>
 </head>
 <body>
-    <h1>Daren Yong</h1>
-    <p>Software engineer. Building.</p>
+    <nav>
+        <a href="index.html" class="name">Daren Yong</a>
+        <span class="subtitle">AI-First Software Engineer</span>
+        <a href="harness.html">The Harness</a>
+        <a href="method.html">The Method</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <div class="verse">
+                Built from the ground<br>
+                to fit the shape<br>
+                of a builder who wants<br>
+                to remain at <em>altitude</em>
+            </div>
+            <div class="attribution">
+                Personalized AI — built, not bought.
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/pyrite-choice.png" alt="Watercolor pyrite cubes">
+            <div class="image-subtext">
+                Pyrite — fool's gold.<br>
+                The shape matters more<br>
+                than the shimmer.
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-hint">Scroll to explore</div>
+
+    <section class="content-section">
+        <div class="section-label">The problem</div>
+        <h2>Everyone's shipping faster.<br>Almost nobody's shipping <em>better</em>.</h2>
+        <p>
+            AI made implementation nearly free. You can generate a thousand lines
+            of code in seconds. But delivering code that works, that you know works,
+            that solves the right problem, that handles failure gracefully, that
+            future-you can maintain — that's still expensive. The cost didn't
+            disappear. It moved.
+        </p>
+        <p>
+            It moved to the human. To the one who defines what to build before
+            the AI writes it, and evaluates what came back after. The harness
+            around the model is where all the value lives now. The model is
+            a commodity. The judgment is not.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <div class="section-label">The approach</div>
+        <h2>Define. Implement. Evaluate.<br>Then <em>remember</em>.</h2>
+        <p>
+            Most AI workflows are a loop — define the task, let the AI write it,
+            review the output, repeat. Three steps. But loops don't compound.
+            You start every session from zero, re-explaining your architecture,
+            your preferences, your past decisions.
+        </p>
+        <p>
+            Add a fourth step and the loop becomes a spiral. Each session builds
+            on the last. The AI starts knowing your taste — what you accept, what
+            you reject, why you chose this pattern over that one. The partnership
+            compounds. A year of sessions produces something no fresh conversation
+            can replicate.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <div class="section-label">The infrastructure</div>
+        <h2>A workshop shaped<br>by the builder's <em>hands</em>.</h2>
+        <p>
+            NixOS because the machine should rebuild itself — don't descend to
+            fix infrastructure. Common Lisp because the session never dies — stay
+            in the running system. A 4GB ARM VM because constraints enforce
+            discipline — you can't over-engineer in a small box.
+        </p>
+        <p>
+            Every technical choice answers the same question: how do I stay at
+            the altitude where I'm most effective? The friction isn't a bug.
+            The friction carved the shape. Without it, you get another generic
+            AI wrapper that looks like every other one on GitHub.
+        </p>
+    </section>
+
 </body>
 </html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Method — Daren Yong</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Baskerville', 'Georgia', serif;
+            background: #faf6f0;
+            color: #3a2e28;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            color: #8a7e76;
+            gap: 2rem;
+        }
+
+        nav .name {
+            font-weight: 700;
+            color: #3a2e28;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        nav .subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8a7e76;
+            border-left: 1px solid #d9d0c7;
+            padding-left: 1.5rem;
+        }
+
+        nav a {
+            color: #8a7e76;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #3a2e28; }
+        nav a.active { color: #3a2e28; }
+
+        .subtle-link {
+            color: #3a2e28;
+            text-decoration: none;
+            border-bottom: 2px solid #8a7e76;
+            transition: border-color 0.2s;
+        }
+
+        .subtle-link:hover {
+            border-color: #3a2e28;
+        }
+
+        .page-header {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 4rem 3rem 2rem;
+        }
+
+        .page-header .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #8a7e76;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .content-section {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 3rem 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: #3a2e28;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #5a4e46;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section em {
+            color: #3a2e28;
+            font-style: italic;
+        }
+
+        .divider {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .divider hr {
+            border: none;
+            border-top: 1px solid #d9d0c7;
+        }
+
+        .method-hero {
+            display: flex;
+            align-items: center;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 4rem 3rem 2rem;
+            gap: 2rem;
+        }
+
+        .method-hero .hero-heading {
+            flex: 1;
+            max-width: 320px;
+        }
+
+        .method-hero .hero-heading .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #8a7e76;
+            margin-bottom: 2rem;
+        }
+
+        .method-hero .hero-heading h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .method-hero .hero-image {
+            flex: 1;
+        }
+
+        .method-hero img {
+            max-width: 100%;
+            mix-blend-mode: multiply;
+            clip-path: inset(10px);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; gap: 1rem; }
+            .page-header { padding: 2rem 1.5rem 1rem; }
+            .content-section { padding: 2rem 1.5rem; }
+            .method-hero { padding: 1rem 1.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="name">Daren Yong</a>
+        <span class="subtitle">AI-First Software Engineer</span>
+        <a href="harness.html">The Harness</a>
+        <a href="method.html" class="active">The Method</a>
+    </nav>
+
+    <div class="method-hero">
+        <div class="hero-heading">
+            <div class="section-label">Process</div>
+            <h1>Two monks <a class="subtle-link" href="https://asiasociety.org/tibetan-buddhist-debate" target="_blank" rel="noopener">debating</a><br>at the edge of <em>understanding</em>.</h1>
+        </div>
+        <div class="hero-image">
+            <img src="assets/two-monks.png" alt="Two monks debating in a courtyard">
+        </div>
+    </div>
+
+    <section class="content-section">
+        <p>
+            The human steers. The AI amplifies. Neither writes alone.
+            Every entry in the journal survived a debate before it was
+            written — challenged, refined, sharpened by two perspectives
+            that see different things.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <h2>Thirty years of journaling, supercharged</h2>
+        <p>
+            The practice isn't new — daily notes for decades, always there
+            to return to when issues surfaced at work, even years later.
+            What's new is the structure. Human and agent pair together to
+            write, debate, and organize. The journal becomes structured
+            knowledge, not just notes.
+        </p>
+        <p>
+            Sparks graduate to threads. Threads graduate to handbooks.
+            The furnace burns what doesn't survive. The agent links,
+            connects, and surfaces patterns the human missed. What remains
+            is steel — compressed, tested, proven.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <h2>Taste as the unsolved problem</h2>
+        <p>
+            No amount of compute solves taste. Ten Nvidia 3090s can't solve it.
+            A self-improving loop can't solve it. The one thing that addresses
+            taste is a human who stays at altitude — who defines what good
+            looks like before the AI writes, and evaluates what came back after.
+        </p>
+        <p>
+            The journal is grinding implicit judgment into explicit signal.
+            Each session where the human steers and corrects, where "no, not
+            that — this" gets captured, that's taste being externalized.
+            One session at a time.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <h2>The dream</h2>
+        <p>
+            A journal so clear on what the builder's taste actually is —
+            what he builds, why, how he evaluates, what he rejects — that
+            an autonomous agent could act with that taste. Not "do as told"
+            but "do as I would have done."
+        </p>
+        <p>
+            Maybe not an impossible dream. Models improve, context windows
+            expand, memory architectures mature. The journal work compounds
+            regardless. If the technology catches up, the taste is already
+            externalized and waiting. If it doesn't, you still have the
+            best-structured partnership journal a builder ever kept.
+        </p>
+    </section>
+
+</body>
+</html>

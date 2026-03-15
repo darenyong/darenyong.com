@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Harness — Daren Yong</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Libre Baskerville', 'Georgia', serif;
+            background: #faf6f0;
+            color: #3a2e28;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            color: #8a7e76;
+            gap: 2rem;
+        }
+
+        nav .name {
+            font-weight: 700;
+            color: #3a2e28;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        nav .subtitle {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8a7e76;
+            border-left: 1px solid #d9d0c7;
+            padding-left: 1.5rem;
+        }
+
+        nav a {
+            color: #8a7e76;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: #3a2e28; }
+        nav a.active { color: #3a2e28; }
+
+        .page-header {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 4rem 3rem 2rem;
+        }
+
+        .page-header .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #8a7e76;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .content-section {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 3rem 3rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: #3a2e28;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #5a4e46;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section em {
+            color: #3a2e28;
+            font-style: italic;
+        }
+
+        .harness-hero {
+            display: flex;
+            align-items: center;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 4rem 3rem 2rem;
+            gap: 2rem;
+        }
+
+        .harness-hero .hero-heading {
+            flex: 1;
+            max-width: 320px;
+        }
+
+        .harness-hero .hero-heading .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #8a7e76;
+            margin-bottom: 2rem;
+        }
+
+        .harness-hero .hero-heading h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .harness-hero .hero-image {
+            flex: 1;
+        }
+
+        .harness-hero img {
+            max-width: 100%;
+            mix-blend-mode: multiply;
+            clip-path: inset(10px);
+        }
+
+        .diagram-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem 3rem;
+        }
+
+        .diagram-container .mermaid {
+            background: #f4efe8;
+            border-radius: 4px;
+            padding: 3rem 3rem;
+        }
+
+        .diagram-container .mermaid .cluster-label {
+            font-size: 1.2rem;
+        }
+
+        .divider {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .divider hr {
+            border: none;
+            border-top: 1px solid #d9d0c7;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; gap: 1rem; }
+            .page-header { padding: 2rem 1.5rem 1rem; }
+            .content-section { padding: 2rem 1.5rem; }
+            .diagram-container { padding: 1rem 1.5rem; }
+        }
+    </style>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#f4efe8',
+                primaryTextColor: '#3a2e28',
+                primaryBorderColor: '#d9d0c7',
+                lineColor: '#8a7e76',
+                secondaryColor: '#faf6f0',
+                tertiaryColor: '#f4efe8',
+                fontFamily: 'Libre Baskerville, Georgia, serif',
+                fontSize: '20px',
+                nodeBorder: '#8a7e76',
+                nodeTextColor: '#3a2e28',
+                clusterBkg: '#f4efe8',
+                clusterBorder: '#d9d0c7'
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="name">Daren Yong</a>
+        <span class="subtitle">AI-First Software Engineer</span>
+        <a href="harness.html" class="active">The Harness</a>
+        <a href="method.html">The Method</a>
+    </nav>
+
+    <div class="harness-hero">
+        <div class="hero-heading">
+            <div class="section-label">Architecture</div>
+            <h1>The system around the model<br>is where the <em>value</em> lives.</h1>
+        </div>
+        <div class="hero-image">
+            <img src="assets/pyrite-harness.png" alt="Watercolor pyrite cubes — interconnected system">
+        </div>
+    </div>
+
+    <section class="content-section">
+        <p>
+            The model is a commodity — swap Claude for the next best thing and
+            the code still works. What can't be swapped is the infrastructure
+            that feeds it context, captures what matters, and forgets what doesn't.
+            That's the harness.
+        </p>
+    </section>
+
+    <div class="diagram-container">
+        <pre class="mermaid">
+graph TB
+    subgraph "&nbsp;&nbsp;&nbsp; Input &nbsp;&nbsp;&nbsp;"
+        A["Telegram
+        (mobile voice)"] --> B[The Harness]
+        C["Claude Code
+        (desktop)"] --> B
+    end
+
+    subgraph "&nbsp;&nbsp;&nbsp; Memory &nbsp;&nbsp;&nbsp;"
+        B --> D[Dirty Pond — raw conversation capture]
+        D --> F[TimescaleDB — 30 day window]
+        G[Cold Reservoir — curated steel] -->|"knowledge"| B
+    end
+
+    subgraph "&nbsp;&nbsp;&nbsp; Refinement &nbsp;&nbsp;&nbsp;"
+        B --> H[Two Monks Journal]
+        H --> I[sparks → threads → handbooks]
+        I -->|"furnace"| G
+    end
+        </pre>
+    </div>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <h2>The input channels</h2>
+        <p>
+            Two ways in. Claude Code on the desktop for interactive sessions —
+            the workbench where architecture happens. Telegram on mobile for
+            voice-to-text via Wispr — thoughts captured on the move, routed
+            through the cave to the same session. Desk-to-mobile handoff
+            without losing context.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <h2>The memory architecture</h2>
+        <p>
+            Two pools, different temperatures. The <em>dirty pond</em> captures
+            everything — raw prompt/response pairs from every session, tagged
+            by source, stored in TimescaleDB with a 30-day window. Automatic,
+            unfiltered, searchable. The noise floor.
+        </p>
+        <p>
+            The <em>cold reservoir</em> is the opposite — curated knowledge that
+            survived the furnace. Partnership principles, builder shape, terrain
+            choices, visions. Loaded on demand when a topic matches. Four pieces
+            of steel, not fourteen thousand facts.
+        </p>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="content-section">
+        <h2>The trajectory loop</h2>
+        <p>
+            The journal is the engine. Each session produces sparks — ideas that
+            might matter. Sparks that keep coming back graduate to threads.
+            Threads that survive into daily use become handbooks. Everything
+            else burns in the furnace. What survives is steel — knowledge
+            compressed by use and refined by forgetting.
+        </p>
+        <p>
+            This is how the partnership compounds. Not by accumulating everything,
+            but by forgetting almost everything and keeping only what earned
+            survival. A year of sessions doesn't produce a bigger pile. It
+            produces a sharper edge.
+        </p>
+    </section>
+
+</body>
+</html>
