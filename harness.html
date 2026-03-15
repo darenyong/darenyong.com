@@ -232,9 +232,9 @@ graph TB
     end
 
     subgraph "&nbsp;&nbsp;&nbsp; Memory &nbsp;&nbsp;&nbsp;"
-        B --> D[Dirty Pond — raw conversation capture]
+        B -->|"thin straw (pond.search)"| D[Dirty Pond — raw conversation capture]
         D --> F[TimescaleDB — 30 day window]
-        G[Cold Reservoir — curated steel] -->|"knowledge"| B
+        G[Cold Reservoir — curated steel] -->|"knowledge index"| B
     end
 
     subgraph "&nbsp;&nbsp;&nbsp; Refinement &nbsp;&nbsp;&nbsp;"
@@ -253,7 +253,7 @@ graph TB
             Two ways in. Claude Code on the desktop for interactive sessions —
             the workbench where architecture happens. Telegram on mobile for
             voice-to-text via Wispr — thoughts captured on the move, routed
-            through the cave to the same session. Desk-to-mobile handoff
+            through the harness to the same session. Desk-to-mobile handoff
             without losing context.
         </p>
     </section>
@@ -271,7 +271,7 @@ graph TB
         <p>
             The <em>cold reservoir</em> is the opposite — curated knowledge that
             survived the furnace. Partnership principles, builder shape, terrain
-            choices, visions. Loaded on demand when a topic matches. Four pieces
+            choices, visions. Loaded on demand when a topic matches. Pieces
             of steel, not fourteen thousand facts.
         </p>
     </section>
