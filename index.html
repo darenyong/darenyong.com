@@ -234,14 +234,15 @@
             of code in seconds. But delivering code that works, that you know works,
             that solves the right problem, that handles failure gracefully, that
             future-you can maintain — that's still expensive. The cost didn't
-            disappear. It moved. I've watched vibe-coded solutions pass the demo
-            and fail the first production weekend — the pattern is always the same.
+            disappear. It moved.
         </p>
         <p>
-            It moved to the human. To the one who defines what to build before
-            the AI writes it, and evaluates what came back after. The harness
-            around the model is where all the value lives now. The model is
-            a commodity. The judgment is not.
+            It moved to the human. I've watched vibe-coded solutions pass
+            hundreds of tests, yet careful manual review still surfaced hidden
+            bugs and unexpected behavior changes. The harness around the model
+            — the human who defines what to build before the AI writes it, and
+            evaluates what came back after — is where all the value lives now.
+            The model is a commodity. The judgment is not.
         </p>
     </section>
 
@@ -254,9 +255,7 @@
             Most AI workflows are a loop — define the task, let the AI write it,
             review the output, repeat. Three steps. But loops don't compound.
             You start every session from zero, re-explaining your architecture,
-            your preferences, your past decisions. It's the same playbook that
-            took a Node service from zero to 97% coverage — define the spec
-            before writing, evaluate against it after.
+            your preferences, your past decisions.
         </p>
         <p>
             Add a fourth step and the loop becomes a spiral. Each session builds
@@ -273,19 +272,20 @@
         <div class="section-label">The infrastructure</div>
         <h2>A workshop shaped<br>by the builder's <em>hands</em>.</h2>
         <p>
-            NixOS because the machine should rebuild itself from a single file —
-            the same reproducibility principle behind CI/CD for a 2.2-million
-            vehicle fleet. Common Lisp because the running system is the spec —
-            full visibility, no framework magic, the same discipline as spec-driven
-            development over vibe coding. A 4GB ARM VM because constraints enforce
-            the production mindset — you can't over-engineer in a small box, just
-            like you can't afford to on a system handling real traffic.
+            NixOS because an immutable OS is a stable platform for fearless experimentation —
+            experiment freely, break things, then one command rolls you back to
+            working. Every dependency is declared or it doesn't exist, down to
+            the SSL library. Common Lisp because there's no
+            framework between you and the running system — when something breaks,
+            you see everything. No black boxes, no magic, no layer you didn't
+            write. A 4GB ARM VM because constraints enforce discipline — you
+            can't over-engineer in a small box.
         </p>
         <p>
             Every technical choice answers the same question: how do I stay at
-            the altitude where I'm most effective? These aren't hobby preferences.
-            They're the same architectural instincts that shaped production systems
-            — applied to a personal workshop.
+            the altitude where I'm most effective? The friction isn't a bug.
+            The friction carved the shape. Without it, you get another generic
+            AI wrapper that looks like every other one on GitHub.
         </p>
     </section>
 

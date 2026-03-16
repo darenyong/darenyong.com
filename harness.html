@@ -154,6 +154,23 @@
             font-size: 1.2rem;
         }
 
+        .num-block {
+            display: inline-block;
+            width: 1.4em;
+            height: 1.4em;
+            line-height: 1.4em;
+            text-align: center;
+            background: #3a2e28;
+            color: #faf6f0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 2px;
+            margin-right: 0.5em;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+        }
+
         .divider {
             max-width: 640px;
             margin: 0 auto;
@@ -217,7 +234,21 @@
             The model is a commodity — swap Claude for the next best thing and
             the code still works. What can't be swapped is the infrastructure
             that feeds it context, captures what matters, and forgets what doesn't.
-            That's the harness.
+            That's the harness. Two ideas hold it up:
+        </p>
+        <p>
+            <span class="num-block">1</span>
+            Real knowledge is uncovered over time — debated, investigated,
+            reviewed before it earns a place in the catalog. This is where the
+            compounding happens. Not from accumulating everything, but from
+            refining what survives.
+        </p>
+        <p>
+            <span class="num-block">2</span>
+            Always re-explaining yourself is tiresome, yet most of what's said
+            doesn't deserve permanent storage. A short 30-day history of
+            discussions provides just enough recall to keep things on track
+            without drowning in noise.
         </p>
     </section>
 
@@ -248,36 +279,18 @@ graph TB
     <div class="divider"><hr></div>
 
     <section class="content-section">
-        <h2>The input channels</h2>
-        <p>
-            Two ways in. Claude Code on the desktop for interactive sessions —
-            the workbench where architecture happens. Telegram on mobile for
-            voice-to-text via Wispr — thoughts captured on the move, routed
-            through the harness to the same session. Same problem as shift
-            handoff on a support team: context lost between channels is
-            context you'll debug later. This solves it at the infrastructure level.
-        </p>
-    </section>
-
-    <div class="divider"><hr></div>
-
-    <section class="content-section">
         <h2>The memory architecture</h2>
         <p>
-            Two pools, different temperatures. The <em>dirty pond</em> is a log
-            aggregation strategy — raw prompt/response pairs from every session,
-            tagged by source, stored in TimescaleDB with a 30-day window. The same
-            approach as centralized logging in production: capture everything,
-            query when you need it. 72% of production incidents trace back to
-            context that was available but not surfaced. The pond makes sure
-            nothing falls through.
+            Two pools, different temperatures. The <em>dirty pond</em> captures
+            everything — raw prompt/response pairs from every session, tagged
+            by source, stored in TimescaleDB with a 30-day window. Automatic,
+            unfiltered, searchable. The noise floor.
         </p>
         <p>
-            The <em>cold reservoir</em> is the opposite — curated business rules
-            that survived the furnace. The same discipline as maintaining the 100
-            business rules captured for a dealer configuration management system:
-            not raw data, but tested knowledge loaded on demand when a topic
-            matches. Pieces of steel, not fourteen thousand facts.
+            The <em>cold reservoir</em> is the opposite — curated knowledge that
+            survived the furnace. Partnership principles, builder shape, terrain
+            choices, visions. Loaded on demand when a topic matches. Pieces
+            of steel, not fourteen thousand facts.
         </p>
     </section>
 
@@ -286,11 +299,11 @@ graph TB
     <section class="content-section">
         <h2>The trajectory loop</h2>
         <p>
-            The journal is the engine. Each session produces sparks — ideas that
+            The journal is the engine. The prompt a steering wheel. Each session produces sparks — ideas that
             might matter. Sparks that keep coming back graduate to threads.
             Threads that survive into daily use become handbooks. The spec-driven
-            development playbook came from this loop — a spark from a production
-            session, refined through debate, adopted by the team. Everything
+            development playbook came from this loop — a spark from production
+            code, refined, then adopted by the team. Everything
             else burns in the furnace. What survives is steel — knowledge
             compressed by use and refined by forgetting.
         </p>
